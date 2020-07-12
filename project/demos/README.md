@@ -1,6 +1,9 @@
 ## Description
 This directory contains demo programs that demonstrate basic I/O using timer and button interrupts.
 
+Button Demo is where the program for the toy is at. Run the make file and load
+it to the MSP430 to experiment with project 2.
+
 Program | Description
 ------- | -----------
 Blink   | Uses timer interrupts to flash the LEDs in a silly pattern.
