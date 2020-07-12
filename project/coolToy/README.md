@@ -1,18 +1,17 @@
-## Description
-This directory contains demo programs that demonstrate basic I/O using timer and button interrupts.
+# Project 2: Blinky Buzzy Toy
 
-Button Demo is where the program for the toy is at. Run the make file and load
-it to the MSP430 to experiment with project 2.
+This toy uses 4 different buttons that display lights, sounds, or a
+combination of both.
 
-Program | Description
-------- | -----------
-Blink   | Uses timer interrupts to flash the LEDs in a silly pattern.
-Button  | Uses interrupts to detect when a switch is pressed or released.
-Buzzer  | Emits a single continuous note from the buzzer.
-Dim     | Uses Pulse Width Modulation (PWN) to illuminate an LED dimly.
+# Buttons
 
-## How to Use
+- ** Button 1: ** This button shows the lights staying on for a short time.
+- ** Button 2: ** This button play a short molody.
+- ** Button 3: ** This button play an alarm while flashing lights.
+- ** Button 4: ** This button shows a light pattern like a police siren.
 
-The Makefile in this direcory contains rules to run the Makefile in each demo directory. Use **make** in this directory to build all demo programs and the timer library. Once the programs are built, you can load the program onto the MSP430 by changing into the corresponding demo directory and using **make load**.
+# Collaboration
 
-You may use **mspdebug rf2500 "erase"** to clear a program from the MSP430.
+Airam martinez helped me get a better understaing on how buttons and LEDs
+work. He showed me to detect a button press and how to modify LEDs by letting
+me take a look at his progress in github.
