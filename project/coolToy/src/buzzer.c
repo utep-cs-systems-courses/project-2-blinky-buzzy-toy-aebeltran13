@@ -37,11 +37,6 @@ void song(){
 
   float notes[30] = {mF,0,a,mC,0,0,a,0,mF,d,d,d,0,0,0,0,mF,a,mC,0,a,0,mF,e,0,mD,d};
   for(int i = 0; i < 30; i++){
-    if(i % 2 == 0){
-      toggle_on();
-    }else{
-      toggle_off();
-    }
     buzzer_set_period(notes[i]);
     __delay_cycles(2500000);
   }
@@ -49,11 +44,13 @@ void song(){
 }
 
 void siren_song(){
-  for(int i = 0; i<60; i++){
+  for(int i = 0; i<30; i++){
     if(i % 2 == 0){
       buzzer_set_period(2000);
+      toggle_on();
     }else{
       buzzer_set_period(1000);
+      toggle_off();
     }
     __delay_cycles(2500000);
   }

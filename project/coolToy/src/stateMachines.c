@@ -8,7 +8,7 @@
 void state_advance(int state){
   switch(state){
   case 1:
-    led_flash();
+    led_dim();
     state = 0;
     break;
   case 2:

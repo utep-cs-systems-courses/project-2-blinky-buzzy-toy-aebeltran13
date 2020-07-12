@@ -23,30 +23,40 @@ void led_update(){
 
 void toggle_on(){
   P1OUT = LED_RED;
+  __delay_cycles(500000);
   P1OUT = LED_GREEN;
+  __delay_cycles(500000);
 }
 
 void toggle_off(){
+  P1OUT = !(LED_GREEN);
+  __delay_cycles(500000);
   P1OUT = !LED_RED;
-  P1OUT = !LED_GREEN;
+  __delay_cycles(500000);
 }
 
-void led_flash(){
-  for(int i = 0; i<20; i++){   /* flashes the lights 20 times */
-  toggle_on();
-  __delay_cycles(2500000);
-  toggle_off();
-  __delay_cycles(2500000);
+void led_dim(){
+  for(int i = 0; i<1000; i++){
+    P1OUT = LED_RED;
+    __delay_cycles(10000);
+    P1OUT = LED_GREEN;
+    __delay_cycles(10000);
+    P1OUT = !LED_RED;
+    __delay_cycles(10000);
+    P1OUT = !LED_GREEN;
+    __delay_cycles(10000);
   }
 }
 
 void led_siren(){
-  for(int i = 0; i<100; i++){ /* will switch from red to green and vice verse 100 times */
-    P1OUT = LED_RED;
-    P1OUT = !LED_GREEN;
-    __delay_cycles(2500000);
-    P1OUT = !LED_RED;
+  for(int i = 0; i<20; i++){ /* will switch from red to green and vice verse 100 times */
     P1OUT = LED_GREEN;
+    __delay_cycles(500000);
+    P1OUT = !LED_RED;
+    __delay_cycles(2500000);
+    P1OUT = !LED_GREEN;
+    __delay_cycles(500000);
+    P1OUT = LED_RED;
     __delay_cycles(2500000);
   }
 }
