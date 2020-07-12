@@ -5,10 +5,10 @@ combination of both.
 
 # Buttons
 
-- ** Button 1: ** This button shows the lights staying on for a short time.
-- ** Button 2: ** This button play a short molody.
-- ** Button 3: ** This button play an alarm while flashing lights.
-- ** Button 4: ** This button shows a light pattern like a police siren.
+- **Button 1:** This button shows the lights staying on for a short time.
+- **Button 2:** This button play a short molody.
+- **Button 3:** This button play an alarm while flashing lights.
+- **Button 4:** This button shows a light pattern like a police siren.
 
 # Collaboration
 
